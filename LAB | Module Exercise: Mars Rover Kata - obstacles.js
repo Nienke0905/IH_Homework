@@ -1,7 +1,7 @@
 // Rover Object Goes Here
 // ======================
 let board = [
-  ["R", "O", "", "", "", "", "", "", ""],
+  ["R", "", "O", "", "", "", "", "", ""],
   ["", "", "", "", "", "", "", "", ""],
   ["", "", "", "", "", "", "", "", ""],
   ["O", "", "", "", "", "O", "", "", ""],
@@ -241,4 +241,4 @@ function commando(rover, commands) {
   console.log(board);
 }
 
-commando(theRover, "rfrftffrbbb");
+commando(theRover, "bblflffrfflf");
