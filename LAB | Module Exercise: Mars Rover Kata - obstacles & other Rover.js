@@ -26,7 +26,7 @@ let theRover1 = {
   travelLog: [{ x: 0, y: 0 }],
   roverSymbol: "R1",
   count: 0,
-  commands: "rffrfflffirfflbb"
+  commands: "rffrfflffirfflbbff"
 };
 
 let theRover2 = {
@@ -37,7 +37,7 @@ let theRover2 = {
   travelLog: [{ x: 2, y: 4 }],
   roverSymbol: "R2",
   count: 0,
-  commands: "flffrfbbpblffrff"
+  commands: "flffrfbbpblffrffrflfff"
 };
 
 // ======================
@@ -240,7 +240,7 @@ function moveBackward(rover) {
 
 function drivingRover(ro1, ro2) {
   let turn;
-  while (ro1.count < ro1.commands.length && ro2.count < ro2.commands.length) {
+  while (ro1.count < ro1.commands.length || ro2.count < ro2.commands.length) {
     if (ro1.count <= ro2.count) {
       turn = ro1;
     } else {
@@ -260,6 +260,8 @@ function drivingRover(ro1, ro2) {
       case "b": // move forward
         moveBackward(turn);
         break;
+      case undefined: // when no more commands are provided for a rover
+        break;
       default:
         console.log(`${turn.commands[turn.count]} is not a valid command.`);
     }
@@ -270,7 +272,5 @@ function drivingRover(ro1, ro2) {
 }
 
 drivingRover(theRover1, theRover2);
-// console.log(theRover1);
-// console.log(theRover2);
-
-// 
+//console.log(theRover1);
+//console.log(theRover2);
