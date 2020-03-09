@@ -1,4 +1,30 @@
-// Rover Object Goes Here
+// Suggest to run code in Repl.it or any other console, the console.log of the travelLog looks a bit strange in Codepen.
+// ======================
+
+// Ensure travelLog starting coordinates correspond with x y coordinates.
+
+let theRover1 = {
+  name: "Rover1",
+  direction: "N",
+  x: 0,
+  y: 0,
+  travelLog: [{ x: 0, y: 0 }],
+  roverSymbol: "R1",
+  count: 0,
+  commands: "frffrfflffir"
+};
+
+let theRover2 = {
+  name: "Rover2",
+  direction: "N",
+  x: 2,
+  y: 4,
+  travelLog: [{ x: 2, y: 4 }],
+  roverSymbol: "R2",
+  count: 0,
+  commands: "flffrfbbpblf"
+};
+
 // ======================
 
 // "O" is an Obstacle
@@ -16,31 +42,6 @@ let board = [
   ["", "O", "", "", "O", "", "", "", ""]
 ];
 
-// Ensure travelLog coordinates correspond with x y coordinates.
-
-let theRover1 = {
-  name: "Rover1",
-  direction: "N",
-  x: 0,
-  y: 0,
-  travelLog: [{ x: 0, y: 0 }],
-  roverSymbol: "R1",
-  count: 0,
-  commands: "rffrfflffirfflbbff"
-};
-
-let theRover2 = {
-  name: "Rover2",
-  direction: "N",
-  x: 2,
-  y: 4,
-  travelLog: [{ x: 2, y: 4 }],
-  roverSymbol: "R2",
-  count: 0,
-  commands: "flffrfbbpblffrffrflfff"
-};
-
-// ======================
 
 function turnLeft(rover) {
   console.log(`turnLeft was called by ${rover.name}!`);
@@ -235,7 +236,7 @@ function moveBackward(rover) {
   board[rover.y][rover.x] = rover.roverSymbol;
   let newPosition = { x: rover.x, y: rover.y };
   rover.travelLog.push(newPosition);
-  //console.log(board);
+  //console.log(board); // When you want to keep on seeing the movements on the board
 }
 
 function drivingRover(ro1, ro2) {
@@ -267,10 +268,9 @@ function drivingRover(ro1, ro2) {
     }
     turn.count += 1;
   }
-  console.log("Rover 1: \n", ro1.travelLog, "\n Rover 2 :\n", ro2.travelLog);
-  console.log(board);
+  console.log("Rover 1: \n", ro1.travelLog) 
+  console.log("Rover 2: \n", ro2.travelLog);
+  // console.log(board); // To show the end state of the board.
 }
 
 drivingRover(theRover1, theRover2);
-//console.log(theRover1);
-//console.log(theRover2);
