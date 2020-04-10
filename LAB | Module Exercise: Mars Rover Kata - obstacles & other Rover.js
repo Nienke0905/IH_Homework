@@ -1,4 +1,5 @@
-// Suggest to run code in Repl.it or any other console, the console.log of the travelLog looks a bit strange in Codepen.
+// Suggest to run code in Repl.it, the console.log of the travelLog and the board itself looks a bit strange in Codepen.
+// If you do decide to run the code in Codepen, please comment out the board on line 274.
 // ======================
 
 // Ensure travelLog starting coordinates correspond with x y coordinates.
@@ -270,7 +271,7 @@ function drivingRover(ro1, ro2) {
   }
   console.log("Rover 1: \n", ro1.travelLog) 
   console.log("Rover 2: \n", ro2.travelLog);
-  // console.log(board); // To show the end state of the board.
+  console.log(board); // To show the end state of the board.
 }
 
 drivingRover(theRover1, theRover2);
