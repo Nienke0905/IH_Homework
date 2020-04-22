@@ -264,8 +264,8 @@ let board = [
     //   console.log(board); // When you want to keep on seeing the movements on the board
       obstacles();
     }
-    console.log("Rover 1: \n", ro1.travelLog);
-    console.log("Rover 2: \n", ro2.travelLog);
+    console.log("Rover 1 travel log: \n", ro1.travelLog);
+    console.log("Rover 2 travel log: \n", ro2.travelLog);
     console.log(board); // To show the end state of the board.
   }
 
