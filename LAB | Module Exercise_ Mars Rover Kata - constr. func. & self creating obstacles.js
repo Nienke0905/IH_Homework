@@ -269,6 +269,7 @@ let board = [
     console.log(board); // To show the end state of the board.
   }
 
+// new Rover ("name", "direction it is facing N(orth),E(east), S(outh), W(est)", coordinate x, coordinate y, "directions")
   let rover1 = new Rover("Rover1", "N", 0,0, "frffrfflfirrffl");
   let rover2 = new Rover("Rover2", "S", 4,3, "brffffllfftrbbrf");
   
