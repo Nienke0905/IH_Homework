@@ -270,6 +270,7 @@ let board = [
   }
 
 // new Rover ("name", "direction it is facing N(orth),E(east), S(outh), W(est)", coordinate x, coordinate y, "directions")
+// directions are f(orward), r(irght to turn your rover to face it a new direction to the right), b(ackward), l(eft to turn your rove to face a new direction to the left)
   let rover1 = new Rover("Rover1", "N", 0,0, "frffrfflfirrffl");
   let rover2 = new Rover("Rover2", "S", 4,3, "brffffllfftrbbrf");
   
